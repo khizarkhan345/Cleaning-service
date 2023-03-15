@@ -1,9 +1,28 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import AboutUs from "./components/AboutUs/AboutUs";
+import FAQ from "./components/FAQ/FAQ";
+import BookNow from "./components/BookNow/BookNow";
+import Footer from "./commons/Footer";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Cleaning Service App</h1>
+      <div>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/booknow" element={<BookNow />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/faq" element={<FAQ />} />
+          </Routes>
+        </BrowserRouter>
+        <Footer />
+      </div>
     </div>
   );
 }

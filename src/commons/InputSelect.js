@@ -23,7 +23,14 @@ function InputSelect(props) {
           fontSize: "2rem",
         },
 
+        "& .MuiSelect-root": {
+          fontSize: "2rem",
+        },
+
         "& .MuiOutlinedInput-root-MuiSelect-root": {
+          fontSize: "2rem",
+        },
+        "& .MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root": {
           fontSize: "2rem",
         },
       }}
@@ -36,10 +43,24 @@ function InputSelect(props) {
         onChange={(e) => handleState(e.target.value)}
         autoWidth
         label="St"
+        sx={{
+          "& .MuiSelect-root": {
+            fontSize: "2rem",
+          },
+          "& .MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root": {
+            fontSize: "2rem",
+          },
+        }}
       >
-        <MenuItem value={"VA"}>VA</MenuItem>
-        <MenuItem value={"MD"}>MD</MenuItem>
-        <MenuItem value={"DC"}>DC</MenuItem>
+        <MenuItem value={"VA"} sx={{ fontSize: "2rem" }}>
+          VA
+        </MenuItem>
+        <MenuItem value={"MD"} sx={{ fontSize: "2rem" }}>
+          MD
+        </MenuItem>
+        <MenuItem value={"DC"} sx={{ fontSize: "2rem" }}>
+          DC
+        </MenuItem>
       </Select>
     </FormControl>
   );

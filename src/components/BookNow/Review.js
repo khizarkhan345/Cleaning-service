@@ -28,17 +28,17 @@ function Review(props) {
   const dateAndTime = dayjs(date) + " " + dayjs(time);
   return (
     <Grid>
-      <Typography
-        variant="body1"
-        sx={{
-          fontSize: "1.6rem",
-          marginBottom: "2rem",
-        }}
-      >
-        3. Review and Book
-      </Typography>
       <Grid sx={{ width: "25%", margin: "0 auto" }}>
         <Grid>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: "1.6rem",
+              margin: "3rem 0",
+            }}
+          >
+            3. Review and Book
+          </Typography>
           <Typography variant="h3">Personal Information</Typography>
           <Item
             sx={{

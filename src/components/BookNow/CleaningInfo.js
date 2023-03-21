@@ -33,27 +33,30 @@ function CleaningInfo(props) {
         },
       }}
     >
-      <Grid sx={{ width: "85%", margin: "0 auto" }}>
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: "1.6rem",
-            marginBottom: "2rem",
-          }}
-        >
-          1. Cleaning Information
-        </Typography>
-      </Grid>
+      <Grid sx={{ width: "59.5%", margin: "0 auto" }}></Grid>
 
       <Grid
         sx={{
-          width: "85%",
-          margin: "0 auto",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
         }}
       >
+        <Grid sx={{ display: "flex", flexDirection: "row" }}>
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: "1.6rem",
+              marginBottom: "2rem",
+              width: "37.5rem",
+              marginRight: "0 !important",
+              marginLeft: "0 !important",
+            }}
+          >
+            1. Cleaning Information
+          </Typography>
+          <Item sx={{ width: "36rem" }}></Item>
+        </Grid>
         <Grid
           sx={{
             display: "flex",
@@ -103,34 +106,48 @@ function CleaningInfo(props) {
             <InputTime time={time} setTime={handleTime} />
           </Grid>
         </Grid>
+        <Grid sx={{ display: "flex", flexDirection: "row" }}>
+          <Item sx={{ width: "37.5rem" }}>
+            <Typography
+              variant="body1"
+              sx={{ fontSize: "1.6rem", marginTop: "3rem" }}
+            >
+              Estimated Price:
+            </Typography>
+            <Typography
+              variant="h3"
+              sx={{
+                fontSize: "2.6rem",
+                fontWeight: 600,
+              }}
+            >
+              ${totalPrice}
+            </Typography>
+          </Item>
+          <Item sx={{ width: "36rem" }}></Item>
+        </Grid>
+        <Grid sx={{ display: "flex", flexDirection: "row" }}>
+          <Item sx={{ width: "37rem" }}></Item>
+          <Item sx={{ width: "36rem", marginBottom: "3rem" }}>
+            {" "}
+            <Button
+              variant="filled"
+              sx={{
+                width: "13rem",
+                height: "5rem",
+                color: "#fff",
+                fontSize: "1.5rem",
+                backgroundColor: "#000080",
+                borderRadius: "2rem",
+                marginLeft: "23.5rem",
+              }}
+              onClick={() => handleBool1()}
+            >
+              Next
+            </Button>
+          </Item>
+        </Grid>
       </Grid>
-      <Typography
-        variant="body1"
-        sx={{ fontSize: "1.6rem", marginLeft: "31.2rem", marginTop: "3rem" }}
-      >
-        Estimated Price:
-      </Typography>
-      <Typography
-        variant="h3"
-        sx={{ fontSize: "2.6rem", fontWeight: 600, marginLeft: "31.2rem" }}
-      >
-        ${totalPrice}
-      </Typography>
-      <Button
-        variant="filled"
-        sx={{
-          width: "13rem",
-          height: "5rem",
-          color: "#fff",
-          fontSize: "1.5rem",
-          backgroundColor: "#000080",
-          borderRadius: "2rem",
-          margin: "2rem 0 2rem 91.5rem",
-        }}
-        onClick={() => handleBool1()}
-      >
-        Next
-      </Button>
     </Grid>
   );
 }

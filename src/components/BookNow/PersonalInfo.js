@@ -28,24 +28,29 @@ function PersonalInfo(props) {
   } = props;
   return (
     <Grid>
-      <Typography
-        variant="body1"
-        sx={{
-          fontSize: "1.6rem",
-          marginBottom: "2rem",
-        }}
-      >
-        2. Personal Information
-      </Typography>
       <Grid
         sx={{
-          width: "85%",
-          margin: "0 auto",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
         }}
       >
+        <Grid
+          sx={{ display: "flex", flexDirection: "row", marginBottom: "2rem" }}
+        >
+          <Item sx={{ width: "25rem" }}>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: "1.6rem",
+                marginBottom: "2rem",
+              }}
+            >
+              2. Personal Information
+            </Typography>
+          </Item>
+          <Item sx={{ width: "25rem" }}></Item>
+        </Grid>
         <Grid
           sx={{ display: "flex", flexDirection: "row", marginBottom: "2rem" }}
         >
@@ -142,43 +147,53 @@ function PersonalInfo(props) {
           sx={{
             display: "flex",
             flexDirection: "row",
-            marginBottom: "3rem",
-            "& .MuiButton-root:hover": {
-              backgroundColor: "#414194",
-              color: "#fff",
-              border: "none",
-            },
           }}
         >
-          <Button
-            variant="outlined"
-            sx={{
-              width: "13rem",
-              height: "5rem",
-              color: "#000080",
-              fontSize: "1.5rem",
-              border: "2px solid #000080",
-              borderRadius: "2rem",
-              marginRight: "1.5rem",
-            }}
-            onClick={() => handleBool1()}
-          >
-            Previous
-          </Button>
-          <Button
-            variant="filled"
-            sx={{
-              width: "13rem",
-              height: "5rem",
-              color: "#fff",
-              fontSize: "1.5rem",
-              backgroundColor: "#000080",
-              borderRadius: "2rem",
-            }}
-            onClick={() => handleBool2()}
-          >
-            Next
-          </Button>
+          <Item sx={{ width: "23rem" }}></Item>
+          <Item sx={{ width: "27rem" }}>
+            <Grid
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                marginBottom: "3rem",
+                "& .MuiButton-root:hover": {
+                  backgroundColor: "#414194",
+                  color: "#fff",
+                  border: "none",
+                },
+              }}
+            >
+              <Button
+                variant="outlined"
+                sx={{
+                  width: "13rem",
+                  height: "5rem",
+                  color: "#000080",
+                  fontSize: "1.5rem",
+                  border: "2px solid #000080",
+                  borderRadius: "2rem",
+                  marginRight: "1.5rem",
+                }}
+                onClick={() => handleBool1()}
+              >
+                Previous
+              </Button>
+              <Button
+                variant="filled"
+                sx={{
+                  width: "13rem",
+                  height: "5rem",
+                  color: "#fff",
+                  fontSize: "1.5rem",
+                  backgroundColor: "#000080",
+                  borderRadius: "2rem",
+                }}
+                onClick={() => handleBool2()}
+              >
+                Next
+              </Button>
+            </Grid>
+          </Item>
         </Grid>
       </Grid>
     </Grid>

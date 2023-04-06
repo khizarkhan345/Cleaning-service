@@ -16,7 +16,7 @@ function InputSpecial(props) {
           value={date}
           onChange={(newValue) => setDate(newValue)}
           sx={{
-            width: "36rem",
+            width: "100%",
             borderRadius: "1rem",
             "& .MuiOutlinedInput-input": {
               fontSize: "2rem",

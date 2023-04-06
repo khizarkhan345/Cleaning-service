@@ -28,19 +28,31 @@ function Review(props) {
   const dateAndTime = dayjs(date) + " " + dayjs(time);
   return (
     <Grid>
-      <Grid sx={{ width: "25%", margin: "0 auto" }}>
-        <Grid>
-          <Typography
-            variant="body1"
-            sx={{
-              fontSize: "1.6rem",
-              margin: "3rem 0",
-            }}
-          >
-            3. Review and Book
-          </Typography>
-          <Typography variant="h3">Personal Information</Typography>
-          <Item
+      <Grid
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Grid
+          sx={{ marginBottom: "2rem", width: { xs: "32rem", sm: "35rem" } }}
+        >
+          <Item item>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: "1.6rem",
+              }}
+            >
+              3. Review & Book
+            </Typography>
+          </Item>
+          <Item>
+            <Typography variant="h3">Personal Information</Typography>
+          </Item>
+
+          <Grid
             sx={{
               display: "flex",
               flexDirection: "row",
@@ -78,7 +90,7 @@ function Review(props) {
               </Typography>
               <Typography variant="body2">{lastName}</Typography>
             </Item>
-          </Item>
+          </Grid>
           <Item
             sx={{
               display: "flex",
@@ -126,10 +138,13 @@ function Review(props) {
             <Typography variant="body2">{address}</Typography>
           </Item>
         </Grid>
-        <Typography variant="h3" sx={{ marginBottom: "2rem" }}>
-          Cleaning Inforamation
-        </Typography>
-        <Grid>
+
+        <Grid sx={{ width: { xs: "32rem", sm: "35rem" } }}>
+          <Item>
+            <Typography variant="h3" sx={{ marginBottom: "2rem" }}>
+              Cleaning Inforamation
+            </Typography>
+          </Item>
           {noOfBedrooms > 0 ? (
             <Item>
               <Typography
@@ -228,9 +243,11 @@ function Review(props) {
         </Grid>
         <Grid
           sx={{
+            width: { xs: "32rem", sm: "35rem" },
             display: "flex",
             flexDirection: "row",
             marginBottom: "3rem",
+            justifyContent: "flex-end",
             "& .MuiButton-root:hover": {
               backgroundColor: "#414194",
               color: "#fff",

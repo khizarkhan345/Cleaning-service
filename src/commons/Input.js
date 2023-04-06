@@ -11,7 +11,7 @@ function Input(props) {
   return (
     <Item
       sx={{
-        width: "36rem",
+        width: "100%",
         height: "5.7rem",
         backgroundColor: "#d1d5db",
         borderRadius: "1rem",

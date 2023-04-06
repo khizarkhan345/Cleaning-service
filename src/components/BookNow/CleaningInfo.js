@@ -33,8 +33,6 @@ function CleaningInfo(props) {
         },
       }}
     >
-      <Grid sx={{ width: "59.5%", margin: "0 auto" }}></Grid>
-
       <Grid
         sx={{
           display: "flex",
@@ -42,35 +40,39 @@ function CleaningInfo(props) {
           alignItems: "center",
         }}
       >
-        <Grid sx={{ display: "flex", flexDirection: "row" }}>
-          <Typography
-            variant="body1"
+        <Grid
+          sx={{ display: "flex", flexDirection: "row", marginBottom: "2rem" }}
+        >
+          <Item
+            item
             sx={{
-              fontSize: "1.6rem",
-              marginBottom: "2rem",
-              width: "37.5rem",
-              marginRight: "0 !important",
-              marginLeft: "0 !important",
+              width: { xs: "32.4rem", sm: "37.5rem" },
             }}
           >
-            1. Cleaning Information
-          </Typography>
-          <Item sx={{ width: "36rem" }}></Item>
+            <Typography
+              variant="body1"
+              sx={{
+                fontSize: "1.6rem",
+              }}
+            >
+              1. Cleaning Information
+            </Typography>
+          </Item>
+          <Item item sx={{ width: { xs: "0", sm: "35.9rem" } }}></Item>
         </Grid>
         <Grid
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-          }}
+          container
+          spacing={2}
+          sx={{ width: { xs: "33.4rem", sm: "75rem" }, marginBottom: "2rem" }}
         >
-          <Grid xs={6} sx={{ marginRight: "2rem" }}>
+          <Grid item xs={12} sm={6}>
             <Input
               input={noOfBedrooms}
               name={"Bedrooms"}
               handleInput={handleBedrooms}
             />
           </Grid>
-          <Grid xs={6}>
+          <Grid item xs={12} sm={6}>
             <Input
               input={noOfBathrooms}
               name={"Bathrooms"}
@@ -79,16 +81,18 @@ function CleaningInfo(props) {
           </Grid>
         </Grid>
         <Grid
-          sx={{ display: "flex", flexDirection: "row", marginTop: "2.5rem" }}
+          container
+          spacing={2}
+          sx={{ width: { xs: "33.4rem", sm: "75rem" }, marginBottom: "2rem" }}
         >
-          <Grid xs={6} sx={{ marginRight: "2rem" }}>
+          <Grid item xs={12} sm={6}>
             <Input
               input={noOfLivingRooms}
               name={"Livingrooms"}
               handleInput={handleLivingrooms}
             />
           </Grid>
-          <Grid xs={6}>
+          <Grid item xs={12} sm={6}>
             <Input
               input={noOfKitchens}
               name={"Kitchens"}
@@ -97,21 +101,25 @@ function CleaningInfo(props) {
           </Grid>
         </Grid>
         <Grid
-          sx={{ display: "flex", flexDirection: "row", marginTop: "2.5rem" }}
+          container
+          spacing={2}
+          sx={{ width: { xs: "33.4rem", sm: "75rem" }, marginBottom: "2rem" }}
         >
-          <Grid xs={6} sx={{ marginRight: "2rem" }}>
+          <Grid item xs={12} sm={6}>
             <InputSpecial date={date} setDate={handleDate} />
           </Grid>
-          <Grid xs={6}>
+          <Grid item xs={12} sm={6}>
             <InputTime time={time} setTime={handleTime} />
           </Grid>
         </Grid>
-        <Grid sx={{ display: "flex", flexDirection: "row" }}>
-          <Item sx={{ width: "37.5rem" }}>
-            <Typography
-              variant="body1"
-              sx={{ fontSize: "1.6rem", marginTop: "3rem" }}
-            >
+        <Grid sx={{ display: "flex", flexDirection: "row", marginTop: "3rem" }}>
+          <Item
+            item
+            sx={{
+              width: { xs: "15.9rem", sm: "37.5rem" },
+            }}
+          >
+            <Typography variant="body1" sx={{ fontSize: "1.6rem" }}>
               Estimated Price:
             </Typography>
             <Typography
@@ -124,13 +132,16 @@ function CleaningInfo(props) {
               ${totalPrice}
             </Typography>
           </Item>
-          <Item sx={{ width: "36rem" }}></Item>
-        </Grid>
-        <Grid sx={{ display: "flex", flexDirection: "row" }}>
-          <Item sx={{ width: "37rem" }}></Item>
-          <Item sx={{ width: "36rem", marginBottom: "3rem" }}>
-            {" "}
+          <Item
+            item
+            sx={{
+              width: { xs: "15.9rem", sm: "35.9rem" },
+              marginTop: "5.4rem",
+              marginBottom: "2rem",
+            }}
+          >
             <Button
+              item
               variant="filled"
               sx={{
                 width: "13rem",
@@ -139,7 +150,7 @@ function CleaningInfo(props) {
                 fontSize: "1.5rem",
                 backgroundColor: "#000080",
                 borderRadius: "2rem",
-                marginLeft: "23.5rem",
+                marginLeft: { xs: "3.2rem", sm: "22.9rem" },
               }}
               onClick={() => handleBool1()}
             >

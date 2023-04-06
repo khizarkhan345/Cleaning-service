@@ -8,6 +8,8 @@ import BookNow from "./components/BookNow/BookNow";
 import Footer from "./commons/Footer";
 import CleaningInfo from "./components/BookNow/CleaningInfo";
 import PersonalInfo from "./components/BookNow/PersonalInfo";
+import DrawerAppBar from "./components/Navbar/Navbar1";
+//import TestGrid from "./components/BookNow/TestGrid";
 import "./App.css";
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
     <div className="App">
       <div>
         <BrowserRouter>
-          <Navbar />
+          <DrawerAppBar />
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/booknow" element={<BookNow />} />

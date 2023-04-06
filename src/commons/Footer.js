@@ -2,7 +2,6 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
 import { Typography, Link } from "@mui/material";
-import BottomBar from "./BottomBar";
 
 function Footer() {
   return (
@@ -68,11 +67,12 @@ function Footer() {
         </Grid>
       </Grid>
       <Typography
+        item
         variant="body1"
         sx={{
           display: "block",
           color: "#fff",
-          fontSize: "1.8rem",
+          fontSize: { xs: "1.6rem", sm: "1.8rem" },
           textAlign: "center",
           marginTop: "2rem",
         }}

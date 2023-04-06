@@ -9,7 +9,7 @@ function InputSelect(props) {
   return (
     <FormControl
       sx={{
-        width: "5rem",
+        width: "100%",
 
         "& .MuiInputLabel-root": {
           fontSize: "2rem",
@@ -41,7 +41,7 @@ function InputSelect(props) {
         id="demo-simple-select-autowidth"
         value={state}
         onChange={(e) => handleState(e.target.value)}
-        autoWidth
+        width="100%"
         label="St"
         sx={{
           "& .MuiSelect-root": {

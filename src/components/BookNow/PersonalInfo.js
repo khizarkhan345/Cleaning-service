@@ -49,99 +49,74 @@ function PersonalInfo(props) {
               2. Personal Information
             </Typography>
           </Item>
-          <Item sx={{ width: "25rem" }}></Item>
+          <Item sx={{ width: { xs: "8.4rem", sm: "23.4rem" } }}></Item>
         </Grid>
         <Grid
-          sx={{ display: "flex", flexDirection: "row", marginBottom: "2rem" }}
+          container
+          spacing={2}
+          sx={{ width: { xs: "35rem", sm: "50rem" }, marginBottom: "2rem" }}
         >
-          <Grid xs={6} sx={{ marginRight: "1rem" }}>
-            <Item>
-              <InputField
-                input={firstName}
-                label={"First Name"}
-                setInput={handleFirstName}
-                width={"24.5rem"}
-              />
-            </Item>
+          <Grid item xs={12} sm={6}>
+            <InputField
+              input={firstName}
+              label={"First Name"}
+              setInput={handleFirstName}
+            />
           </Grid>
-          <Grid xs={6}>
-            <Item>
-              <InputField
-                input={lastName}
-                label={"Last Name"}
-                setInput={handleLastName}
-                width={"24.5rem"}
-              />
-            </Item>
+          <Grid item xs={12} sm={6}>
+            <InputField
+              input={lastName}
+              label={"Last Name"}
+              setInput={handleLastName}
+            />
           </Grid>
         </Grid>
-        <Grid sx={{ marginBottom: "2rem" }}>
-          <Item>
-            <InputField
-              input={email}
-              label={"Email"}
-              setInput={handleEmail}
-              width={"50rem"}
-            />
-          </Item>
-        </Grid>
-        <Grid sx={{ marginBottom: "2rem" }}>
-          <Item>
-            <InputField
-              input={stAdress}
-              label={"Street Address"}
-              setInput={handleStAddress}
-              width={"50rem"}
-            />
-          </Item>
+        <Grid item xs={12} sm={6}></Grid>
+        <Grid
+          sx={{ width: { xs: "33.4rem", sm: "48.4rem" }, marginBottom: "2rem" }}
+        >
+          <InputField input={email} label={"Email"} setInput={handleEmail} />
         </Grid>
         <Grid
+          item
+          sx={{ width: { xs: "33.4rem", sm: "48.4rem" }, marginBottom: "2rem" }}
+        >
+          <InputField
+            input={stAdress}
+            label={"Street Address"}
+            setInput={handleStAddress}
+          />
+        </Grid>
+        <Grid
+          container
+          spacing={2}
           sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
             marginBottom: "2rem",
+            width: { xs: "35rem", sm: "50rem" },
           }}
         >
-          <Grid xs={5} sx={{ marginRight: "1rem" }}>
-            <Item>
-              <InputField
-                input={city}
-                label={"City"}
-                setInput={handleCity}
-                width={"21.25rem"}
-              />
-            </Item>
+          <Grid item xs={12} sm={5}>
+            <InputField input={city} label={"City"} setInput={handleCity} />
           </Grid>
-          <Grid xs={2} sx={{ marginRight: "1rem" }}>
-            <Item>
-              <InputSelect
-                state={state}
-                handleState={handleState}
-                width={"5rem"}
-              />
-            </Item>
+          <Grid item xs={12} sm={2}>
+            <InputSelect state={state} handleState={handleState} />
           </Grid>
-          <Grid xs={5}>
-            <Item>
-              <InputField
-                input={zipCode}
-                label={"Zipcode"}
-                setInput={handleZipCode}
-                width={"21.25rem"}
-              />
-            </Item>
+          <Grid item xs={12} sm={5}>
+            <InputField
+              input={zipCode}
+              label={"Zipcode"}
+              setInput={handleZipCode}
+            />
           </Grid>
         </Grid>
-        <Grid sx={{ marginBottom: "2rem" }}>
-          <Item>
-            <InputField
-              input={phoneNo}
-              label={"Phone No"}
-              setInput={handlePhoneNo}
-              width={"50rem"}
-            />
-          </Item>
+        <Grid
+          sx={{ width: { xs: "33.4rem", sm: "48.4rem" }, marginBottom: "2rem" }}
+        >
+          <InputField
+            input={phoneNo}
+            label={"Phone No"}
+            setInput={handlePhoneNo}
+          />
         </Grid>
         <Grid
           sx={{
@@ -149,7 +124,7 @@ function PersonalInfo(props) {
             flexDirection: "row",
           }}
         >
-          <Item sx={{ width: "23rem" }}></Item>
+          <Item sx={{ width: { xs: "6.4rem", sm: "21.4rem" } }}></Item>
           <Item sx={{ width: "27rem" }}>
             <Grid
               sx={{

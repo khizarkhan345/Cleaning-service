@@ -2,7 +2,7 @@ import React from "react";
 import TextField from "@mui/material/TextField";
 
 function InputField(props) {
-  const { input, label, width, setInput } = props;
+  const { input, label, setInput } = props;
   return (
     <TextField
       id="outlined-controlled"
@@ -12,7 +12,7 @@ function InputField(props) {
         setInput(event.target.value);
       }}
       sx={{
-        width: width,
+        width: "100%",
         fontSize: "2rem",
         "& .MuiInputLabel-root": {
           fontSize: "2rem",

@@ -36,7 +36,12 @@ function FAQ() {
   };
 
   return (
-    <Grid sx={{ width: "75%", margin: "0 auto 10rem auto" }}>
+    <Grid
+      container
+      direction="column"
+      alignItems="center"
+      sx={{ width: "75%", margin: "0 auto 10rem auto" }}
+    >
       <Typography
         variant="h1"
         sx={{
@@ -48,7 +53,7 @@ function FAQ() {
       >
         Frequently Asked Questions (F.A.Q)
       </Typography>
-      <Grid sx={{ borderRadius: "1rem" }}>
+      <Grid xs={12} sx={{ borderRadius: "1rem" }}>
         <Item>
           <Item
             sx={{

@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
-import { Button, Box, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import Input from "../../commons/Input";
 import InputSpecial from "../../commons/InputSpecial";
 import InputTime from "../../commons/InputTime";
@@ -44,7 +44,6 @@ function CleaningInfo(props) {
           sx={{ display: "flex", flexDirection: "row", marginBottom: "2rem" }}
         >
           <Item
-            item
             sx={{
               width: { xs: "32.4rem", sm: "37.5rem" },
             }}
@@ -58,7 +57,7 @@ function CleaningInfo(props) {
               1. Cleaning Information
             </Typography>
           </Item>
-          <Item item sx={{ width: { xs: "0", sm: "35.9rem" } }}></Item>
+          <Item sx={{ width: { xs: "0", sm: "35.9rem" } }}></Item>
         </Grid>
         <Grid
           container

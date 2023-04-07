@@ -1,37 +1,49 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
-import { Avatar, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import image from "../../images/blob-mop.png";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
 function Hero() {
-  const URL = "../../images/blob-mop.png";
-
   return (
     <Grid container sx={{ backgroundColor: "#F8FCFF" }}>
-      <Grid sx={{ width: "85%", margin: "0 auto", display: "flex" }}>
+      <Grid
+        container
+        sx={{
+          width: { xs: "90%", sm: "92%", md: "85%" },
+          maxWidth: { xs: "90%", sm: "92%", md: "85%" },
+          margin: "0 auto",
+        }}
+      >
         <Grid
           item
-          xs={4}
+          xs={12}
+          sm={5}
           sx={{
             "& .MuiButton-root:hover": {
               backgroundColor: "#414194",
             },
           }}
         >
-          <Item>
+          <Item
+            sx={{
+              width: { xs: "95%" },
+              maxWidth: { xs: "95%" },
+              margin: { xs: "0 auto" },
+            }}
+          >
             <Typography
               variant="h1"
               sx={{
                 fontSize: "4rem",
-                width: "40rem",
+                width: { sm: "auto", md: "40rem" },
                 height: "auto",
                 marginTop: "8rem",
               }}
             >
-              Clean Your Mind And Your Space
+              Cleanse Your Mind And Your Space
             </Typography>
             <Typography
               variant="body2"
@@ -47,12 +59,12 @@ function Hero() {
             </Typography>
             <Button
               sx={{
-                width: "24rem",
+                width: { xs: "95%", sm: "18rem", md: "24rem" },
                 height: "6rem",
                 backgroundColor: "#000080",
                 color: "#fff",
                 borderRadius: "2rem",
-                marginTop: "1rem",
+                marginTop: { xs: "3rem", sm: "1rem" },
                 fontSize: "1.5rem",
               }}
             >
@@ -60,12 +72,16 @@ function Hero() {
             </Button>
           </Item>
         </Grid>
-        <Grid item xs={8} sx={{ marginLeft: "27rem" }}>
+        <Grid item xs={0} sm={7}>
           <Item sx={{}}>
             <Box
               component="img"
               src={image}
-              sx={{ height: "55rem", width: "50rem" }}
+              sx={{
+                height: { xs: "0", sm: "55rem" },
+                width: { xs: "0", sm: "100%" },
+                paddingLeft: { md: "8rem", lg: "15rem" },
+              }}
             />
           </Item>
         </Grid>

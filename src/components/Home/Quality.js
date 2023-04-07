@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
-import { Box, Typography, Icon } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import image from "../../images/blob-group.jpeg";
 import people from "../../images/people.svg";
 import dollar from "../../images/Dollar.svg";
@@ -16,61 +16,69 @@ function Quality() {
             color: "#fff",
             fontSize: "3rem",
             margin: "4rem auto",
+            textAlign: "center",
           }}
         >
           How Does Cleaning Therapy Work?
         </Typography>
       </Grid>
-
-      <Grid sx={{ width: "85%", display: "flex", margin: "0 auto" }}>
-        <Grid xs={6}>
-          <Item>
-            <Box
-              component="img"
-              src={image}
-              sx={{
-                height: "45rem",
-                width: "50rem",
-                borderRadius: "2.5rem",
-                marginTop: "3rem",
-              }}
-            />
-          </Item>
+      <Grid
+        container
+        sx={{ width: { xs: "95%", md: "85%" }, margin: "0 auto" }}
+      >
+        <Grid item xs={12} sm={6}>
+          <Box
+            component="img"
+            src={image}
+            sx={{
+              height: "45rem",
+              width: "100%",
+              borderRadius: "2.5rem",
+              marginTop: "3rem",
+            }}
+          />
         </Grid>
-        <Grid xs={6} sx={{ marginLeft: "8rem", marginTop: "12rem" }}>
-          <Item>
-            <Typography
-              variant="body2"
-              sx={{
-                fontSize: "1.6rem",
-                fontWeight: 300,
-                margin: "auto",
-                color: "#fff",
-                width: "38rem",
-              }}
-            >
-              Studies have shown that a clean and organized environment can have
-              a positive impact on mental health, particularly for people who
-              struggle with anxiety, depression, or other mental health
-              conditions. By taking care of the cleaning tasks that can be
-              overwhelming or stressful, we can help you create a peaceful and
-              relaxing space in your home.
-            </Typography>
-          </Item>
+        <Grid item xs={12} sm={6}>
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: "1.6rem",
+              fontWeight: 300,
+              margin: "auto",
+              color: "#fff",
+              width: "95%",
+
+              padding: {
+                xs: "10rem 2rem 0 2rem",
+                sm: "15rem 0 0 5rem",
+              },
+            }}
+          >
+            Studies have shown that a clean and organized environment can have a
+            positive impact on mental health, particularly for people who
+            struggle with anxiety, depression, or other mental health
+            conditions. By taking care of the cleaning tasks that can be
+            overwhelming or stressful, we can help you create a peaceful and
+            relaxing space in your home.
+          </Typography>
         </Grid>
       </Grid>
-      <Grid sx={{ width: "85%", display: "flex", margin: "15rem auto" }}>
-        <Grid
-          xs={4}
-          sx={{
-            width: "34rem",
-            height: "36rem",
-            borderRadius: "2.5rem",
-            backgroundColor: "#fff",
-          }}
-        >
+      <Grid
+        container
+        rowSpacing={1}
+        columnSpacing={1}
+        sx={{
+          width: { xs: "95%", md: "85%" },
+          margin: { xs: "10rem auto", sm: "15rem auto" },
+        }}
+      >
+        <Grid item xs={12} sm={4} sx={{}}>
           <Item
             sx={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "2.5rem",
+              backgroundColor: "#fff",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -112,9 +120,9 @@ function Quality() {
               variant="body1"
               sx={{
                 textAlign: "center",
-                width: "25rem",
+                width: "90%",
                 fontSize: "1.6rem",
-                marginTop: "1rem",
+                margin: "1rem 0",
               }}
             >
               Our professional house cleaning team has the experience and
@@ -122,18 +130,13 @@ function Quality() {
             </Typography>
           </Item>
         </Grid>
-        <Grid
-          xs={4}
-          sx={{
-            width: "34rem",
-            height: "36rem",
-            borderRadius: "2.5rem",
-            backgroundColor: "#fff",
-            marginLeft: "6rem",
-          }}
-        >
+        <Grid item xs={12} sm={4}>
           <Item
             sx={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "2.5rem",
+              backgroundColor: "#fff",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -175,9 +178,9 @@ function Quality() {
               variant="body1"
               sx={{
                 textAlign: "center",
-                width: "25rem",
+                width: "90%",
                 fontSize: "1.6rem",
-                marginTop: "1rem",
+                margin: "1rem 0",
               }}
             >
               Our top priority is providing excellent service and delivering a
@@ -185,18 +188,12 @@ function Quality() {
             </Typography>
           </Item>
         </Grid>
-        <Grid
-          xs={4}
-          sx={{
-            width: "34rem",
-            height: "36rem",
-            borderRadius: "2.5rem",
-            backgroundColor: "#fff",
-            marginLeft: "6rem",
-          }}
-        >
+        <Grid item xs={12} sm={4}>
           <Item
             sx={{
+              width: "100%",
+              borderRadius: "2.5rem",
+              backgroundColor: "#fff",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -238,9 +235,9 @@ function Quality() {
               variant="body1"
               sx={{
                 textAlign: "center",
-                width: "25rem",
+                width: "90%",
                 fontSize: "1.6rem",
-                marginTop: "1rem",
+                margin: "1rem 0",
               }}
             >
               We offer competitive pricing and flexible service options to make

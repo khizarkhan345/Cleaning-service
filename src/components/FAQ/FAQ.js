@@ -37,15 +37,16 @@ function FAQ() {
 
   return (
     <Grid
-      container
-      direction="column"
+      display="flex"
+      flexDirection="column"
       alignItems="center"
-      sx={{ width: "75%", margin: "0 auto 10rem auto" }}
+      sx={{ width: "55%", margin: "0 auto 0 auto" }}
     >
       <Typography
+        item
         variant="h1"
         sx={{
-          fontSize: "4rem",
+          fontSize: { xs: "3rem", sm: "4rem" },
           textAlign: "center",
           marginTop: "6rem",
           marginBottom: "2rem",
@@ -53,12 +54,18 @@ function FAQ() {
       >
         Frequently Asked Questions (F.A.Q)
       </Typography>
-      <Grid xs={12} sx={{ borderRadius: "1rem" }}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          width: { xs: "32rem", sm: "50rem", md: "75rem" },
+          borderRadius: "1rem",
+          marginBottom: "5rem",
+        }}
+      >
         <Item>
           <Item
             sx={{
-              width: "100rem",
-              height: "9rem",
               display: "flex",
               flexDirection: "row",
               backgroundColor: "#f3f4f6",
@@ -68,15 +75,21 @@ function FAQ() {
             }}
           >
             <Typography
+              item
               variant="body1"
-              sx={{ fontSize: "2rem", marginLeft: "3rem" }}
+              sx={{
+                fontSize: "2rem",
+                marginLeft: "3rem",
+                padding: "1.5rem 0",
+              }}
             >
               How often should i schedule a house cleaning?
             </Typography>
             <Button
+              item
               type="icon"
               onClick={handleButton}
-              sx={{ marginRight: "3rem" }}
+              sx={{ marginRight: { xs: "2rem", sm: "3rem" } }}
             >
               <Box
                 component="img"
@@ -89,7 +102,7 @@ function FAQ() {
             </Button>
           </Item>
           {arrowBool1 && (
-            <Item sx={{ width: "100rem" }}>
+            <Item>
               <Typography
                 variant="body1"
                 sx={{
@@ -111,8 +124,6 @@ function FAQ() {
         <Item>
           <Item
             sx={{
-              width: "100rem",
-              height: "9rem",
               display: "flex",
               flexDirection: "row",
               backgroundColor: "#f3f4f6",
@@ -123,14 +134,19 @@ function FAQ() {
           >
             <Typography
               variant="body1"
-              sx={{ fontSize: "2rem", marginLeft: "3rem" }}
+              sx={{
+                fontSize: "2rem",
+                marginLeft: "3rem",
+                padding: "1.5rem 0",
+              }}
             >
               What tasks are included in a typical house cleaning service?
             </Typography>
             <Button
+              item
               type="icon"
               onClick={handleButton2}
-              sx={{ marginRight: "3rem" }}
+              sx={{ marginRight: { xs: "2rem", sm: "3rem" } }}
             >
               <Box
                 component="img"
@@ -143,7 +159,7 @@ function FAQ() {
             </Button>
           </Item>
           {arrowBool2 && (
-            <Item sx={{ width: "100rem" }}>
+            <Item>
               <Typography
                 variant="body1"
                 sx={{
@@ -163,8 +179,6 @@ function FAQ() {
         <Item>
           <Item
             sx={{
-              width: "100rem",
-              height: "9rem",
               display: "flex",
               flexDirection: "row",
               backgroundColor: "#f3f4f6",
@@ -175,14 +189,19 @@ function FAQ() {
           >
             <Typography
               variant="body1"
-              sx={{ fontSize: "2rem", marginLeft: "3rem" }}
+              sx={{
+                fontSize: "2rem",
+                marginLeft: "3rem",
+                padding: "1.5rem 0",
+              }}
             >
               Do i need to provide cleaning supplies and equipment?
             </Typography>
             <Button
+              item
               type="icon"
               onClick={handleButton3}
-              sx={{ marginRight: "3rem" }}
+              sx={{ marginRight: { xs: "2rem", sm: "3rem" } }}
             >
               <Box
                 component="img"
@@ -195,7 +214,7 @@ function FAQ() {
             </Button>
           </Item>
           {arrowBool3 && (
-            <Item sx={{ width: "100rem" }}>
+            <Item>
               <Typography
                 variant="body1"
                 sx={{
@@ -215,8 +234,6 @@ function FAQ() {
         <Item>
           <Item
             sx={{
-              width: "100rem",
-              height: "9rem",
               display: "flex",
               flexDirection: "row",
               backgroundColor: "#f3f4f6",
@@ -227,14 +244,19 @@ function FAQ() {
           >
             <Typography
               variant="body1"
-              sx={{ fontSize: "2rem", marginLeft: "3rem" }}
+              sx={{
+                fontSize: "2rem",
+                marginLeft: "3rem",
+                padding: "1.5rem 0",
+              }}
             >
               Can i customize the cleaning tasks for my home?
             </Typography>
             <Button
+              item
               type="icon"
               onClick={handleButton4}
-              sx={{ marginRight: "3rem" }}
+              sx={{ marginRight: { xs: "2rem", sm: "3rem" } }}
             >
               <Box
                 component="img"
@@ -247,7 +269,7 @@ function FAQ() {
             </Button>
           </Item>
           {arrowBool4 && (
-            <Item sx={{ width: "100rem" }}>
+            <Item>
               <Typography
                 variant="body1"
                 sx={{
@@ -266,8 +288,6 @@ function FAQ() {
         <Item>
           <Item
             sx={{
-              width: "100rem",
-              height: "9rem",
               display: "flex",
               flexDirection: "row",
               backgroundColor: "#f3f4f6",
@@ -278,14 +298,19 @@ function FAQ() {
           >
             <Typography
               variant="body1"
-              sx={{ fontSize: "2rem", marginLeft: "3rem" }}
+              sx={{
+                fontSize: "2rem",
+                marginLeft: "3rem",
+                padding: "1.5rem 0",
+              }}
             >
               How do i pay for a house cleaning service?
             </Typography>
             <Button
+              item
               type="icon"
               onClick={handleButton5}
-              sx={{ marginRight: "3rem" }}
+              sx={{ marginRight: { xs: "2rem", sm: "3rem" } }}
             >
               <Box
                 component="img"
@@ -298,7 +323,7 @@ function FAQ() {
             </Button>
           </Item>
           {arrowBool5 && (
-            <Item sx={{ width: "100rem" }}>
+            <Item>
               <Typography
                 variant="body1"
                 sx={{

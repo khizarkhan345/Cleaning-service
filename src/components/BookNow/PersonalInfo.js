@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
 import InputField from "../../commons/InputField";
-import InputSelect from "../../commons/InputState";
+import InputState from "../../commons/InputState";
 
 function PersonalInfo(props) {
   const {
@@ -99,7 +99,7 @@ function PersonalInfo(props) {
             <InputField input={city} label={"City"} setInput={handleCity} />
           </Grid>
           <Grid item xs={12} sm={2}>
-            <InputSelect state={state} handleState={handleState} />
+            <InputState state={state} handleState={handleState} />
           </Grid>
           <Grid item xs={12} sm={5}>
             <InputField

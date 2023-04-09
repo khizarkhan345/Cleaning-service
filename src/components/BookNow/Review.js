@@ -22,6 +22,7 @@ function Review(props) {
     date,
     time,
     handleBool2,
+    handleSubmit,
   } = props;
 
   const address = stAddress + " " + city + " " + state + " " + zipCode;
@@ -281,6 +282,7 @@ function Review(props) {
               backgroundColor: "#000080",
               borderRadius: "2rem",
             }}
+            onClick={(e) => handleSubmit(e)}
           >
             Submit
           </Button>

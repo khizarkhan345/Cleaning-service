@@ -2,8 +2,11 @@ import React from "react";
 import { useState } from "react";
 import CleaningInfo from "./CleaningInfo";
 import PersonalInfo from "./PersonalInfo";
+import ConfirmationBox from "../../commons/confirmationBox";
 import Review from "./Review";
 import dayjs from "dayjs";
+import { v4 as uuidv4 } from "uuid";
+import Axios from "axios";
 import "./BookNow.css";
 
 function BookNow() {
@@ -16,6 +19,10 @@ function BookNow() {
   const [noOfKitchens, setNoOfKitchens] = useState(0);
   const [date, setDate] = useState(dayjs("2023-04-01"));
   const [time, setTime] = useState(dayjs("2022-04-01T12:00"));
+  const [serverMessage, setServerMessage] = useState(
+    "An unexpected error has occurred. Kindly, try again later."
+  );
+  const [serverError, setServerError] = useState(false);
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -86,6 +93,58 @@ function BookNow() {
     setPhoneNo(newPhoneNo);
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const customerUID = uuidv4();
+    const orderUID = uuidv4();
+
+    await Axios.post("http://localhost:3001/addCustomer", {
+      customerId: customerUID,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      streetAddress: stAddress,
+      city: city,
+      state: state,
+      zipCode: zipCode,
+      phoneNo: phoneNo,
+    })
+      .then(() => {
+        Axios.post("http://localhost:3001/addOrder", {
+          orderId: orderUID,
+          totalBedrooms: noOfBedrooms,
+          totalBathrooms: noOfBathrooms,
+          totalLivingrooms: noOfLivingrooms,
+          totalKitchens: noOfKitchens,
+          appointmentDate: dayjs(date),
+          appointmentTime: dayjs(time).format("HH:MM:A"),
+          totalPrice: totalPrice,
+          customerId: customerUID,
+        })
+          .then(() => {
+            setServerError(!serverError);
+            setServerMessage(
+              "Your order has been submitted successfully! A team member will be in touch with you soon."
+            );
+            console.log("Order success");
+          })
+          .catch((err) => {
+            //setServerError(true);
+            console.log(err);
+          });
+      })
+      .catch((err) => {
+        //setServerError(true);
+        console.log(err);
+      });
+
+    setBool1(!bool1);
+    //setBool2(!bool2);
+
+    console.log("submit is clicked");
+  };
+
   return (
     <div>
       {!bool1 && bool2 && (
@@ -149,6 +208,14 @@ function BookNow() {
           date={date}
           time={time}
           handleBool2={handleBool2}
+          handleSubmit={handleSubmit}
+        />
+      )}
+
+      {!bool1 && !bool2 && (
+        <ConfirmationBox
+          serverErrorBool={serverError}
+          serverMessage={serverMessage}
         />
       )}
     </div>

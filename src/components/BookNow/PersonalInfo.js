@@ -1,9 +1,9 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
-import { Button, Box, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import InputField from "../../commons/InputField";
-import InputSelect from "../../commons/InputSelect";
+import InputSelect from "../../commons/InputState";
 
 function PersonalInfo(props) {
   const {

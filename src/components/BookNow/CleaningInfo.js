@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
 import Input from "../../commons/Input";
-import InputSpecial from "../../commons/InputSpecial";
+import InputDate from "../../commons/InputDate";
 import InputTime from "../../commons/InputTime";
 
 function CleaningInfo(props) {
@@ -22,8 +22,8 @@ function CleaningInfo(props) {
     handleBathrooms,
     handleLivingrooms,
     handleKitchens,
-    handleDate,
-    handleTime,
+    setDate,
+    setTime,
   } = props;
   return (
     <Grid
@@ -105,10 +105,10 @@ function CleaningInfo(props) {
           sx={{ width: { xs: "33.4rem", sm: "75rem" }, marginBottom: "2rem" }}
         >
           <Grid item xs={12} sm={6}>
-            <InputSpecial date={date} setDate={handleDate} />
+            <InputDate date={date} setDate={setDate} />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <InputTime time={time} setTime={handleTime} />
+            <InputTime time={time} setTime={setTime} />
           </Grid>
         </Grid>
         <Grid sx={{ display: "flex", flexDirection: "row", marginTop: "3rem" }}>

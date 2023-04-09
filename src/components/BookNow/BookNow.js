@@ -3,7 +3,6 @@ import { useState } from "react";
 import CleaningInfo from "./CleaningInfo";
 import PersonalInfo from "./PersonalInfo";
 import Review from "./Review";
-import Nav from "./Nav";
 import dayjs from "dayjs";
 import "./BookNow.css";
 
@@ -55,14 +54,6 @@ function BookNow() {
     setTotalPrice(totalPrice + newPrice);
   };
 
-  const handleDate = (newDate) => {
-    setDate(newDate);
-  };
-
-  const handleTime = (newTime) => {
-    setTime(newTime);
-  };
-
   const handleFirstName = (newName) => {
     setFirstName(newName);
   };
@@ -110,8 +101,8 @@ function BookNow() {
           handleKitchens={handleKitchens}
           date={date}
           time={time}
-          handleDate={handleDate}
-          handleTime={handleTime}
+          setDate={setDate}
+          setTime={setTime}
           bool1={bool1}
           handleBool1={handleBool1}
         />

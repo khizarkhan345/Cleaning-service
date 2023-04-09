@@ -25,7 +25,8 @@ function Review(props) {
   } = props;
 
   const address = stAddress + " " + city + " " + state + " " + zipCode;
-  const dateAndTime = dayjs(date) + " " + dayjs(time);
+  const dateAndTime =
+    dayjs(date).format("MM/DD/YYYY") + " " + dayjs(time).format("HH:MM:A");
   return (
     <Grid>
       <Grid

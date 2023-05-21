@@ -99,45 +99,57 @@ function BookNow() {
     const customerUID = uuidv4();
     const orderUID = uuidv4();
 
-    await Axios.post("http://localhost:3001/addCustomer", {
-      customerId: customerUID,
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      streetAddress: stAddress,
-      city: city,
-      state: state,
-      zipCode: zipCode,
-      phoneNo: phoneNo,
-    })
-      .then(() => {
-        Axios.post("http://localhost:3001/addOrder", {
-          orderId: orderUID,
-          totalBedrooms: noOfBedrooms,
-          totalBathrooms: noOfBathrooms,
-          totalLivingrooms: noOfLivingrooms,
-          totalKitchens: noOfKitchens,
-          appointmentDate: dayjs(date),
-          appointmentTime: dayjs(time).format("HH:MM:A"),
-          totalPrice: totalPrice,
-          customerId: customerUID,
-        })
-          .then(() => {
-            setServerError(!serverError);
-            setServerMessage(
-              "Your order has been submitted successfully! A team member will be in touch with you soon."
-            );
-            console.log("Order success");
-          })
-          .catch((err) => {
-            //setServerError(true);
-            console.log(err);
-          });
-      })
-      .catch((err) => {
-        //setServerError(true);
-        console.log(err);
-      });
+    try {
+      try {
+        await Axios.post(
+          "http://Cleaning-service-app-env.eba-cmr24umq.us-east-1.elasticbeanstalk.com/addCustomer",
+          {
+            customerId: customerUID,
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            streetAddress: stAddress,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            phoneNo: phoneNo,
+          }
+        );
+      } catch (e) {
+        console.log(e, "Failed Add Customer");
+      }
+
+      try {
+        await Axios.post(
+          "http://Cleaning-service-app-env.eba-cmr24umq.us-east-1.elasticbeanstalk.com/addOrder",
+          {
+            orderId: orderUID,
+            totalBedrooms: noOfBedrooms,
+            totalBathrooms: noOfBathrooms,
+            totalLivingrooms: noOfLivingrooms,
+            totalKitchens: noOfKitchens,
+            appointmentDate: dayjs(date),
+            appointmentTime: dayjs(time).format("HH:MM:A"),
+            totalPrice: totalPrice,
+            customerId: customerUID,
+          }
+        );
+      } catch (e) {
+        console.log(e, "Failed add Order");
+      }
+    } catch (e) {
+      setServerError(!serverError);
+      setServerMessage(
+        "Your order has been submitted successfully! A team member will be in touch with you soon."
+      );
+      console.log("Order success");
+    }
+
+    // setServerError(!serverError);
+    //       setServerMessage(
+    //         "Your order has been submitted successfully! A team member will be in touch with you soon."
+    //       );
+    //       console.log("Order success");
 
     setBool1(!bool1);
     //setBool2(!bool2);

@@ -5,3 +5,8 @@
 html {
   font-size: 62.5%;
 }
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}

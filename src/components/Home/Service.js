@@ -7,7 +7,7 @@ import checkMark from "../../images/check-mark.svg";
 
 function Service() {
   return (
-    <Grid container sx={{ backgroundColor: "#F8FCFF" }}>
+    <Grid container sx={{ backgroundColor: "#F8FCFF", paddingBottom: "17rem" }}>
       <Grid
         container
         sx={{

@@ -40,7 +40,7 @@ function FAQ() {
       display="flex"
       flexDirection="column"
       alignItems="center"
-      sx={{ width: "55%", margin: "0 auto 0 auto" }}
+      sx={{ width: "55%", margin: "0 auto auto auto" }}
     >
       <Typography
         item

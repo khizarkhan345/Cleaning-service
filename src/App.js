@@ -1,14 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
+import Home from "./components/Home/Home/Home";
 import AboutUs from "./components/AboutUs/AboutUs";
 import FAQ from "./components/FAQ/FAQ";
 import BookNow from "./components/BookNow/BookNow";
 import Footer from "./commons/Footer";
 import CleaningInfo from "./components/BookNow/CleaningInfo";
 import PersonalInfo from "./components/BookNow/PersonalInfo";
-import DrawerAppBar from "./components/Navbar/Navbar1";
+import DrawerAppBar from "./components/Navbar/Navbar";
 //import TestGrid from "./components/BookNow/TestGrid";
 import "./App.css";
 

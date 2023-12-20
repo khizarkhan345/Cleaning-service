@@ -9,6 +9,7 @@ function InputField(props) {
       label={label}
       value={input}
       onChange={(event) => {
+        console.log("Input value:", event.target.value);
         setInput(event.target.value);
       }}
       sx={{

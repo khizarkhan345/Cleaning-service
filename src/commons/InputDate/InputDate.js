@@ -23,6 +23,7 @@ function InputSpecial(props) {
               fontSize: "2rem",
             },
           }}
+          data-testid="datepicker-input"
         />
       </DemoContainer>
     </LocalizationProvider>

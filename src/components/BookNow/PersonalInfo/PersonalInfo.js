@@ -2,8 +2,8 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
-import InputField from "../../commons/InputField";
-import InputState from "../../commons/InputState";
+import InputField from "../../../commons/InputField/InputField";
+import InputState from "../../../commons/InputState/InputState";
 
 function PersonalInfo(props) {
   const {
@@ -99,7 +99,11 @@ function PersonalInfo(props) {
             <InputField input={city} label={"City"} setInput={handleCity} />
           </Grid>
           <Grid item xs={12} sm={2}>
-            <InputState state={state} handleState={handleState} />
+            <InputState
+              state={state}
+              label={"State"}
+              handleState={handleState}
+            />
           </Grid>
           <Grid item xs={12} sm={5}>
             <InputField

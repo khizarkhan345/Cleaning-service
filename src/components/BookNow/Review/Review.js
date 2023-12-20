@@ -144,7 +144,7 @@ function Review(props) {
         <Grid sx={{ width: { xs: "32rem", sm: "35rem" } }}>
           <Item>
             <Typography variant="h3" sx={{ marginBottom: "2rem" }}>
-              Cleaning Inforamation
+              Cleaning Information
             </Typography>
           </Item>
           {noOfBedrooms > 0 ? (
@@ -157,7 +157,7 @@ function Review(props) {
                   margin: "1.5rem 0",
                 }}
               >
-                {noOfBedrooms} room/rooms to be cleaned
+                {noOfBedrooms} bedroom/bedrooms to be cleaned
               </Typography>
             </Item>
           ) : (
@@ -173,7 +173,7 @@ function Review(props) {
                   margin: "1.5rem 0",
                 }}
               >
-                {noOfBathrooms} bathroom/Bathrooms to be cleaned
+                {noOfBathrooms} bathroom/bathrooms to be cleaned
               </Typography>
             </Item>
           ) : (

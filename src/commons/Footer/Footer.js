@@ -7,7 +7,12 @@ function Footer() {
   return (
     <Grid
       container
-      sx={{ backgroundColor: "#5a2aa2", flexDirection: "column", bottom: 0, position: "absolute"}}
+      sx={{
+        backgroundColor: "#5a2aa2",
+        flexDirection: "column",
+        bottom: 0,
+        position: "absolute",
+      }}
     >
       <Grid sx={{ width: "85%", display: "flex", margin: "0 auto" }}>
         <Grid xs={6}>

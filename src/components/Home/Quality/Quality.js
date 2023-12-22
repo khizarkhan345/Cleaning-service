@@ -2,10 +2,10 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
 import { Box, Typography } from "@mui/material";
-import image from "../../images/blob-group.jpeg";
-import people from "../../images/people.svg";
-import dollar from "../../images/Dollar.svg";
-import thumb from "../../images/thumb-up.svg";
+import image from "../../../images/blob-group.jpeg";
+import people from "../../../images/people.svg";
+import dollar from "../../../images/Dollar.svg";
+import thumb from "../../../images/thumb-up.svg";
 function Quality() {
   return (
     <Grid sx={{ backgroundColor: "#5a2aa2" }}>
@@ -30,6 +30,7 @@ function Quality() {
           <Box
             component="img"
             src={image}
+            alt="Cleaning person"
             sx={{
               height: "45rem",
               width: "100%",
@@ -96,6 +97,7 @@ function Quality() {
               <Box
                 component="img"
                 src={people}
+                alt="People"
                 sx={{
                   height: "5rem",
                   width: "5rem",
@@ -154,6 +156,7 @@ function Quality() {
               <Box
                 component="img"
                 src={thumb}
+                alt="Service"
                 sx={{
                   height: "5rem",
                   width: "5rem",
@@ -211,6 +214,7 @@ function Quality() {
               <Box
                 component="img"
                 src={dollar}
+                alt="Cost"
                 sx={{
                   height: "5rem",
                   width: "5rem",

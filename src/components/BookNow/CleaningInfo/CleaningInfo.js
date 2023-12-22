@@ -2,9 +2,9 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
-import Input from "../../commons/Input";
-import InputDate from "../../commons/InputDate";
-import InputTime from "../../commons/InputTime";
+import Input from "../../../commons/Input/Input";
+import InputDate from "../../../commons/InputDate/InputDate";
+import InputTime from "../../../commons/InputTime/InputTime";
 
 function CleaningInfo(props) {
   const {

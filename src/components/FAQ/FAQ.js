@@ -93,6 +93,7 @@ function FAQ() {
             >
               <Box
                 component="img"
+                alt="Arrow 1"
                 src={arrowBool1 === false ? downArrow : upArrow}
                 sx={{
                   height: "4rem",
@@ -150,6 +151,7 @@ function FAQ() {
             >
               <Box
                 component="img"
+                alt="Arrow 2"
                 src={arrowBool2 === false ? downArrow : upArrow}
                 sx={{
                   height: "4rem",
@@ -205,6 +207,7 @@ function FAQ() {
             >
               <Box
                 component="img"
+                alt="Arrow 3"
                 src={arrowBool3 === false ? downArrow : upArrow}
                 sx={{
                   height: "4rem",
@@ -250,7 +253,7 @@ function FAQ() {
                 padding: "1.5rem 0",
               }}
             >
-              Can i customize the cleaning tasks for my home?
+              Can i customise the cleaning tasks for my home?
             </Typography>
             <Button
               item
@@ -260,6 +263,7 @@ function FAQ() {
             >
               <Box
                 component="img"
+                alt="Arrow 4"
                 src={arrowBool4 === false ? downArrow : upArrow}
                 sx={{
                   height: "4rem",
@@ -278,7 +282,7 @@ function FAQ() {
                   border: "1px solid #E5E7EB",
                 }}
               >
-                Yes, we will allow you to customize the cleaning tasks for your
+                Yes, we will allow you to customise the cleaning tasks for your
                 home. It's a good idea to discuss your specific needs and
                 preferences with the cleaning company before booking a service.
               </Typography>
@@ -314,6 +318,7 @@ function FAQ() {
             >
               <Box
                 component="img"
+                alt="Arrow 5"
                 src={arrowBool5 === false ? downArrow : upArrow}
                 sx={{
                   height: "4rem",

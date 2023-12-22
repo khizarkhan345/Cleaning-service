@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
 import { Typography } from "@mui/material";
-import image from "../../images/blob-mop.png";
+import image from "../../../images/blob-mop.png";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
@@ -77,6 +77,7 @@ function Hero() {
             <Box
               component="img"
               src={image}
+              alt="Hero"
               sx={{
                 height: { xs: "0", sm: "55rem" },
                 width: { xs: "0", sm: "100%" },

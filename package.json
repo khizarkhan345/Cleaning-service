@@ -23,14 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test  --transformIgnorePatterns \"node_modules/(?!@mui)/\"",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -43,5 +37,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-flow": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@testing-library/cypress": "^10.0.1",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^29.7.0",
+    "cypress": "^13.6.1",
+    "esm": "^3.2.25"
   }
 }

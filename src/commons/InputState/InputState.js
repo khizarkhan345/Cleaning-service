@@ -5,7 +5,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 function InputSelect(props) {
-  const { state, handleState } = props;
+  const { state, label, handleState } = props;
   return (
     <FormControl
       sx={{
@@ -35,14 +35,14 @@ function InputSelect(props) {
         },
       }}
     >
-      <InputLabel id="demo-simple-select-autowidth-label">St</InputLabel>
+      <InputLabel id="demo-simple-select-autowidth-label">{label}</InputLabel>
       <Select
         labelId="demo-simple-select-autowidth-label"
         id="demo-simple-select-autowidth"
         value={state}
         onChange={(e) => handleState(e.target.value)}
         width="100%"
-        label="St"
+        label={label}
         sx={{
           "& .MuiSelect-root": {
             fontSize: "2rem",

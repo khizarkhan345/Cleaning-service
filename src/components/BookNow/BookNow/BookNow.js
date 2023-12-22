@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import CleaningInfo from "./CleaningInfo";
-import PersonalInfo from "./PersonalInfo";
-import ConfirmationBox from "../../commons/confirmationBox";
-import Review from "./Review";
+import CleaningInfo from "../CleaningInfo/CleaningInfo";
+import PersonalInfo from "../PersonalInfo/PersonalInfo";
+import ConfirmationBox from "../../../commons/ConfirmationBox/confirmationBox";
+import Review from "../Review/Review";
 import dayjs from "dayjs";
 import { v4 as uuidv4 } from "uuid";
 import Axios from "axios";

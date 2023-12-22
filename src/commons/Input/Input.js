@@ -2,8 +2,8 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
 import { Button, Box, Typography } from "@mui/material";
-import minus from "../images/Minus.svg";
-import plus from "../images/Plus.svg";
+import minus from "../../images/Minus.svg";
+import plus from "../../images/Plus.svg";
 
 function Input(props) {
   const { input, name, handleInput } = props;
@@ -29,6 +29,7 @@ function Input(props) {
         <Box
           component="img"
           src={minus}
+          alt="minus"
           sx={{
             height: "3rem",
             width: "3rem",
@@ -37,7 +38,11 @@ function Input(props) {
       </Button>
 
       <Item sx={{ display: "flex", flexDirection: "row" }}>
-        <Typography variant="body1" sx={{ fontSize: "2rem" }}>
+        <Typography
+          variant="body1"
+          data-testid="input"
+          sx={{ fontSize: "2rem" }}
+        >
           {input}
         </Typography>
         <Typography
@@ -51,6 +56,7 @@ function Input(props) {
         <Box
           component="img"
           src={plus}
+          alt="plus"
           sx={{
             height: "3rem",
             width: "3rem",

@@ -2,8 +2,8 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
 import { Box, Typography, Button } from "@mui/material";
-import image from "../../images/blob-vaccum.png";
-import checkMark from "../../images/check-mark.svg";
+import image from "../../../images/blob-vaccum.png";
+import checkMark from "../../../images/check-mark.svg";
 
 function Service() {
   return (
@@ -20,6 +20,7 @@ function Service() {
           <Box
             component="img"
             src={image}
+            alt="Cleaning person"
             sx={{
               height: { xs: "67rem", sm: "60rem", md: "67rem" },
               width: "100%",
@@ -34,7 +35,6 @@ function Service() {
           md={6}
           sx={{
             width: "100%",
-
             backgroundColor: "#fff",
             margin: "10rem 0",
             display: "flex",
@@ -70,6 +70,7 @@ function Service() {
               <Box
                 component="img"
                 src={checkMark}
+                alt="mark"
                 sx={{
                   height: "3.6rem",
                   width: "2.8rem",
@@ -89,6 +90,7 @@ function Service() {
             <Item sx={{ display: "flex", marginTop: "1.5rem" }}>
               <Box
                 component="img"
+                alt="mark"
                 src={checkMark}
                 sx={{
                   height: "3.6rem",
@@ -110,6 +112,7 @@ function Service() {
               <Box
                 component="img"
                 src={checkMark}
+                alt="mark"
                 sx={{
                   height: "3.6rem",
                   width: "2.8rem",
@@ -130,6 +133,7 @@ function Service() {
               <Box
                 component="img"
                 src={checkMark}
+                alt="mark"
                 sx={{
                   height: "3.6rem",
                   width: "2.8rem",

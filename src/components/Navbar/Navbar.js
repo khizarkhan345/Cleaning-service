@@ -93,7 +93,7 @@ function DrawerAppBar(props) {
               display: { xs: "none", sm: "block" },
             }}
           >
-            CLEANING WITH LOVE TEST1
+            CLEANING WITH LOVE TEST2
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Stack

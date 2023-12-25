@@ -5,6 +5,7 @@ import { Typography } from "@mui/material";
 import image from "../../../images/blob-mop.png";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import { Link } from "@mui/material";
 
 function Hero() {
   return (
@@ -68,7 +69,9 @@ function Hero() {
                 fontSize: "1.5rem",
               }}
             >
-              Book Now
+              <Link color="inherit" underline="none" href="/booknow">
+                Book Now
+              </Link>
             </Button>
           </Item>
         </Grid>

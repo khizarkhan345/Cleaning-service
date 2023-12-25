@@ -13,6 +13,7 @@ function Footer() {
         bottom: 0,
         position: "absolute",
       }}
+      className="Footer"
     >
       <Grid sx={{ width: "85%", display: "flex", margin: "0 auto" }}>
         <Grid xs={6}>

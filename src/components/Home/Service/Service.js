@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Item from "@mui/material/Grid";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Link } from "@mui/material";
 import image from "../../../images/blob-vaccum.png";
 import checkMark from "../../../images/check-mark.svg";
 
@@ -163,7 +163,9 @@ function Service() {
                 marginRight: "2rem",
               }}
             >
-              Book Now
+              <Link color="inherit" underline="none" href="/booknow">
+                Book Now
+              </Link>
             </Button>
           </Item>
         </Grid>

@@ -30,14 +30,5 @@ describe("<InputState />", () => {
 
     //Check if the selected state is displayed
     expect(inputElement).toBeInTheDocument();
-
-    // Get the button element
-    const buttonElement = screen.getByRole("button");
-
-    //expect(selectLabel).toHaveValue("VA");
-
-    // fireEvent.click(listbox.getByText("MD"));
-
-    // expect(mockHandleState).toHaveBeenCalledWith("MD");
   });
 });

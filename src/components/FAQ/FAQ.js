@@ -60,7 +60,7 @@ function FAQ() {
         sx={{
           width: { xs: "32rem", sm: "50rem", md: "75rem" },
           borderRadius: "1rem",
-          marginBottom: "5rem",
+          marginBottom: "12rem",
         }}
       >
         <Item>

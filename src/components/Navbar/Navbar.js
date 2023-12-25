@@ -32,7 +32,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h3" sx={{ my: 2, fontSize: "3rem" }}>
-        CLEANING WITH LOVE TEST
+        CLEANING WITH LOVE
       </Typography>
       <Divider />
       <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -93,7 +93,7 @@ function DrawerAppBar(props) {
               display: { xs: "none", sm: "block" },
             }}
           >
-            CLEANING WITH LOVE TEST1
+            CLEANING WITH LOVE
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Stack

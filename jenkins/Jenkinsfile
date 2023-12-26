@@ -1,0 +1,66 @@
+pipeline {
+    
+    agent any
+    
+    environment {
+        // Customize these environment variables
+        AWS_REGION = 'us-east-1'
+        S3_BUCKET_NAME = 'khizar-cleaning-services'
+        NODEJS_VERSION = '20.10.0' // Update with your Node.js version
+        AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
+        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
+        JENKINS_USER = credentials('jenkins-user-github')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+           echo "Fetching code from github repo"
+           
+           git branch: 'main', credentialsId: 'jenkins-user-github', url: 'https://github.com/khizarkhan345/Cleaning-service.git'
+           //git branch: 'main', credentialsId: 'jenkins-user-github', url: 'https://github.com/khizarkhan345/Cleaning-service.git'
+           
+                }
+           
+            }
+    }
+    
+     stage('Install dependencies') {
+            steps {
+                script {
+                    echo "Installing the dependencies"
+                        sh 'npm install'
+                }
+            }
+        }
+        
+    stage('Build') {
+        steps {
+            script {
+                echo "Building the app"
+                sh 'npm run build'
+                
+                // Archive the build artificat
+                archiveArtifacts 'build/**/*'
+            }
+        }
+        
+    }
+    
+    stage('Deploy'){
+        steps {
+            script {
+                echo "Deploying the build to aws s3 bucket"
+                  sh "aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID}"
+                  sh "aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}"
+
+                        // Deploy the build artifacts to S3
+                  sh "aws s3 sync build/ s3://${S3_BUCKET_NAME}/"
+            }
+        }
+    }
+    
+
+    }
+}
